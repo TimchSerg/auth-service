@@ -9,8 +9,4 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
-  @Get(':id')
-  getHelloById(@Param('id') id: string): string {
-    return this.appService.getHelloId(id);
-  }
 }
