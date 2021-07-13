@@ -5,4 +5,7 @@ export class AppService {
   getHello(): string {
     return 'Hello World!';
   }
+  getHelloId(id: string): string {
+    return `Hello World Mr. ${id}!`;
+  }
 }
