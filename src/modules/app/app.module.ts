@@ -1,11 +1,9 @@
-import { Module} from '@nestjs/common'
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { LearningModule } from '../learning/learning.module';
+import { Module, forwardRef } from '@nestjs/common'
+import { AuthModule } from 'src/modules'
 
 @Module({
-  imports: [LearningModule],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    forwardRef(() => AuthModule),
+  ]
 })
 export class AppModule {}
