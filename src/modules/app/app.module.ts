@@ -1,8 +1,9 @@
 import { Module, forwardRef } from '@nestjs/common'
-import { AuthModule } from 'src/modules'
+import { AuthModule, ConfigModule } from 'src/modules'
 
 @Module({
   imports: [
+    forwardRef(() => ConfigModule),
     forwardRef(() => AuthModule),
   ]
 })
