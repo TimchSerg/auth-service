@@ -3,7 +3,7 @@ import { getEnv } from '../utils/common'
 
 const DEFAULTS = {
   [Mode.PRODUCTION]: {
-    // no default values for prodution
+    // no default values for production
   },
   [Mode.DEVELOPMENT]: {
     host: 'localhost',
@@ -24,7 +24,6 @@ const DEFAULTS = {
 export default (() => {
   const NODE_ENV = getEnv('NODE_ENV')
   const defaults = DEFAULTS[NODE_ENV]
-
   return {
     database: {
       dialect: 'postgres',

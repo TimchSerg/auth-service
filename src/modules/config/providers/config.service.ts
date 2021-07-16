@@ -3,12 +3,11 @@ import { config } from 'dotenv'
 import { defaults, get, defaultsDeep } from 'lodash'
 import { parseMode, Mode } from '../utils/constants'
 import { default as custom } from '../custom'
-
 @Injectable()
 export class ConfigService {
 
   private config: Map<string, any>
-
+  
   constructor() {
     this.config = new Map<string, any>()
     defaults(this.config, process.env)
@@ -39,6 +38,7 @@ export class ConfigService {
 
   require<T>(name: string): T {
     const value = get(this.config, name)
+    
     if (value === undefined) {
       throw new Error(`Required value '${name}' was not found`)
     }
