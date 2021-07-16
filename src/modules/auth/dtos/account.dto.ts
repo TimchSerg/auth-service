@@ -1,4 +1,4 @@
-import { IsString, IsUUID, IsDate, IsBoolean } from 'class-validator';
+import { IsString, IsUUID, IsDate } from 'class-validator';
 
 export class AccountDto {
   @IsUUID()
@@ -6,12 +6,6 @@ export class AccountDto {
 
   @IsString()
   login!: string
-
-  @IsString()
-  password!: string
-
-  @IsBoolean()
-  verification!: boolean
 
   @IsDate()
   createdAt!: Date
