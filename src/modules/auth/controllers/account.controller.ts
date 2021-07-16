@@ -1,12 +1,7 @@
 import { Controller, Get, Post, Body } from '@nestjs/common';
 import { CreateAccountDto } from "../dtos";
 import { AccountService } from "../providers/services";
-
-export interface Account {
-  login: string,
-  password: string,
-}
-
+import { Account } from "../domain/interfaces";
 @Controller('accounts')
 export class AccountController{
   constructor(private accountService: AccountService) {}

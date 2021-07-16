@@ -12,7 +12,10 @@ export class AccountModel extends Model<AccountModel> {
   login!: string
 
   @Column(DataType.TEXT)
-  password!: string
+  hash!: string
+
+  @Column(DataType.TEXT)
+  salt!: string
 
   @Column(DataType.DATE)
   updatedAt!: Date

@@ -7,9 +7,6 @@ export class AccountDto {
   @IsString()
   login!: string
 
-  @IsString()
-  password!: string
-
   @IsDate()
   createdAt!: Date
 }
