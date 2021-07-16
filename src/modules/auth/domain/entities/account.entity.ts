@@ -3,8 +3,6 @@ import {
   AccountLogin, 
   AccountPassword,  
 } from '../values'
-import { AccountRepository } from '../repositories'
-
 export class Account {
 
   private _id: AccountId
