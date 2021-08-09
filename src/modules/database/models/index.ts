@@ -1,1 +1,2 @@
-export { AccountModel } from './account.model'
+export { AccountModel } from './account.model';
+export { AccountDataModel } from "./accountData.model";
