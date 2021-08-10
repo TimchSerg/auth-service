@@ -1,6 +1,9 @@
 import { IsString } from 'class-validator';
 
 export class CreateAccountDataDto {
+  
+  @IsString()
+  accountId!: string
 
   @IsString()
   name!: string
@@ -13,5 +16,8 @@ export class CreateAccountDataDto {
 
   @IsString()
   phone!: string
+
+  @IsString()
+  email!: string;
 
 }
